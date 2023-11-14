@@ -19,7 +19,7 @@ any other HTTP client.
 6. Post a dialog that you would like to summarize and receive the results!
 
 The model was hosted on AWS Sagemaker but I took it down because its expensive lol. You can train the model on EC2 if you would like
-but I commented out the CICD for deployment to keep it working for local use instead.
+but I commented out the CICD for deployment to keep it working for local use instead. The trained model is located in the repository at under `/artifacts/model_trainer/pegasus-samsum-model/` and the dataset is located at `/artifacts/data_ingestion/samsum-dataset/`
 
 
 For reference here are additional instructions for hosting the application on EC2 and have a continuous integration system in place:

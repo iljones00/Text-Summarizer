@@ -19,10 +19,10 @@ any other HTTP client.
 6. Post a dialog that you would like to summarize and receive the results!
 
 The model was hosted on AWS Sagemaker but I took it down because its expensive lol. You can train the model on EC2 if you would like
-but I commented out the CICD for deployment for local use instead.
+but I commented out the CICD for deployment to keep it working for local use instead.
 
 
-
+For reference here are additional instructions for hosting the application on EC2 and have a continuous integration system in place:
 
 
 # AWS-CICD-Deployment-with-Github-Actions

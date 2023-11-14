@@ -1,6 +1,6 @@
 # End to End Text Summarization Project
 
-This project is an exploration into building full end-to-end NLP projects using a pretrianed LLM hosted by Hugging Face. I utilize a variety of technologies to build an application API that allows the user to both train and infer for the task of text summarization. 
+This project is an exploration into building full end-to-end NLP projects using a pretrained LLM hosted by Hugging Face. I utilize a variety of technologies to build an application API that allows the user to both train and infer for the task of text summarization. 
 For this project, I used Docker to create a container for replicability, and create various data structures in Python
 that wrap around a Pegasus-CNN pretrained model. More info here --> https://huggingface.co/google/pegasus-cnn_dailymail. 
 This model was pretrained on a large daily mail dataset and then fine-tuned on a Dialogue Summarization dataset DialogSum.
@@ -17,6 +17,8 @@ local use. This can be run locally like this:
 any other HTTP client.
 5. Both the train and the predict endpoints should be available.
 6. Post a dialog that you would like to summarize and receive the results!
+
+My model was trained on Google Colab though it is possible to train it locally on a 16 GB GPU.
 
 The model was hosted on AWS Sagemaker but I took it down because its expensive lol. You can train the model on EC2 if you would like
 but I commented out the CICD for deployment to keep it working for local use instead. The trained model is located in the repository at under `/artifacts/model_trainer/pegasus-samsum-model/` and the dataset is located at `/artifacts/data_ingestion/samsum-dataset/`

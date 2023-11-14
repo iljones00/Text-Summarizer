@@ -7,6 +7,37 @@ This model was pretrained on a large daily mail dataset and then fine-tuned on a
 More info here --> https://paperswithcode.com/dataset/dialogsum. This dataset contains 13,460 dialogues with their corresponding
 human generated summaries and topics. 
 
+This is one example dialog from the dataset:
+
+Hannah: Hey, do you have Betty's number?
+Amanda: Lemme check
+Hannah: <file_gif>
+Amanda: Sorry, can't find it.
+Amanda: Ask Larry
+Amanda: He called her last time we were at the park together
+Hannah: I don't know him well
+Hannah: <file_gif>
+Amanda: Don't be shy, he's very nice
+Hannah: If you say so..
+Hannah: I'd rather you texted him
+Amanda: Just text him 🙂
+Hannah: Urgh.. Alright
+Hannah: Bye
+Amanda: Bye bye
+
+Here is the target response:
+Hannah needs Betty's number but Amanda doesn't have it. She needs to contact Larry.
+
+And this is the output from the model:
+Larry called Betty last time they were at the park together. He's very nice. Hannah wants Amanda to text him. Amanda says she'd rather she text him.
+
+The length of the summary can be cut down further by giving the model a larger length penalty than I am currently using but overall
+not bad. When compared to a a non-finetuned model, the pretrained model straight from hugging face returned this:
+
+Amanda: Ask Larry Amanda: He called her last time we were at the park together .<n>Hannah: I'd rather you texted him .<n>Amanda: Just text him.
+
+As you can see the formatting does get improved with a few thousand training examples to what the user may want. 
+
 After finetuning the model on the dataset, I built a prediction and an inference pipeline linked to FastAPI python application for 
 local use. This can be run locally like this:
 

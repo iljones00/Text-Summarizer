@@ -1,4 +1,4 @@
-# End to End Text Summarization Project
+# End to End Text Summarization Wrapper
 
 This project is an exploration into building full end-to-end NLP projects using a pretrained LLM hosted by Hugging Face. I utilize a variety of technologies to build an application API that allows the user to both train and infer for the task of text summarization. 
 For this project, I used Docker to create a container for replicability, and create various data structures in Python
